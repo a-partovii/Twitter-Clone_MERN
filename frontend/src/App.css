@@ -1,6 +1,7 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+.app-shell {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 100vh;
+  background: #f8fbff;
+  padding: 24px;
 }

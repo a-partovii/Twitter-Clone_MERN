@@ -5,7 +5,8 @@ export const sampleUsers = [
         name: 'Ashkan Partovi',
         email: 'ap@gmail.com',
         bio: 'Drug dealer and stuff',
-        profileImage: "",
+        profileAvatar: "/pfp-images/pfp+a-partovii.jpg",
+        profileBanner: "/banner-images/banner+a-partovii.jpg",
         followersList: ['aaffaas', 'meowmeowmeow'],
         followingList: ['aaffaas', 'meowmeowmeow'],
         get followersCount() { return this.followersList.length; },
@@ -18,7 +19,8 @@ export const sampleUsers = [
         name: 'Safa MH',
         email: 'safa@gmail.com',
         bio: 'Not a drug dealer or whatever',
-        profileImage: "/empty-pfp.png",
+        profileAvatar: "",
+        profileBanner: "",
         followersList: ['a-partovii'],
         followingList: [],
         get followersCount() { return this.followersList.length; },
@@ -31,7 +33,8 @@ export const sampleUsers = [
         name: 'Mr. Meow',
         email: 'meow@gmail.com',
         bio: 'right that stuff',
-        profileImage: "/empty-pfp.png",
+        profileAvatar: "",
+        profileBanner: "",
         followersList: ['a-partovii'],
         followingList: ['a-partovii'],
         get followersCount() { return this.followersList.length; },
@@ -49,3 +52,4 @@ export const sampleUsers = [
 //         followingCount: user.followingList?.length || 0
 //     }));
 // }
+

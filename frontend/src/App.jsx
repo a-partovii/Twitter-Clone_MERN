@@ -1,12 +1,12 @@
-import './App.css'
-import ShowPFP from './components/SideBar/SideBar'
+import "./App.css";
+import RightSidebar from "./components/SideBar/SideBar";
 
 function App() {
   return (
-    <>
-      <ShowPFP user_id="a-partovii" />
-    </>
-  )
+    <div className="app-shell">
+      <RightSidebar userId="a-partovii" />
+    </div>
+  );
 }
 
-export default App
+export default App;

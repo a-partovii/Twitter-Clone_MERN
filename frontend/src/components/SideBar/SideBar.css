@@ -1,4 +1,221 @@
-.pfp{ 
-    width: 100px;
-    height:100px;
-    border-radius: 50%; }
+.right-sidebar {
+  background-color: #e7f0ff;
+  width: 360px;
+  padding: 0 0 100vh 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  border-left: 1px solid #d6e3ff;
+}
+
+/* sidebar header با ارتفاع 15px */
+.sidebar-header {
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.right-sidebar-content {
+  padding: 12px 20px 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.open-sidebar-button {
+  display: none;
+  position: fixed;
+  bottom: 18px;
+  right: 18px;
+  z-index: 90;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 18px;
+  font-weight: 700;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.sidebar-overlay {
+  display: none;
+}
+
+.back-button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  /* دکمه در وسط خط (vertically centered) */
+  margin: 0;
+}
+
+.back-button:hover {
+  background-color: var(--white-hover);
+}
+
+/* بنر که به دیواره‌های طرفین می‌چسبه */
+.profile-header {
+  position: relative;
+  margin-top: 0px; /* فاصله از فضای بالا */
+}
+
+.profile-banner {
+  width: 100%;
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 4px solid #e7f0ff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* عکس بنر کامل نشون داده میشه (نه کراپ) اما توی همون باکس جا میشه */
+.profile-banner img {
+  width: 100%;
+  height: 180px;
+  object-fit: fill;
+}
+
+/* آواتار که نصفش روی بنر و نصفش بیرون است - دکمه Edit profile کنارش */
+.profile-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: -57.5px; /* دقیقاً نصف آواتار (115px / 2 = 57.5px) روی بنر قرار می‌گیره */
+  padding: 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* دکمه Edit profile در قسمت پایینی بنر، بغل عکس پروفایل */
+.profile-top-row .edit-profile-button {
+  margin-bottom: 8px; /* کمی بالاتر از پایین بنر */
+}
+
+.avatar-picture {
+  width: 115px;
+  height: 115px;
+  border-radius: 50%;
+  border: 4px solid #e7f0ff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.edit-profile-button {
+  padding: 10px 20px;
+  border: 1px solid #d0d7df;
+  border-radius: 999px;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  background-color: white;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.edit-profile-button:hover {
+  background-color: #f5f8fb;
+  border-color: #c6d3e0;
+}
+
+.profile-details {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.profile-name-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.verified-badge-large {
+  color: var(--primary-color);
+  font-size: 22px;
+  padding: 0;
+  margin: 0;
+
+}
+
+.profile-username {
+  font-size: 15px;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.profile-bio {
+  font-size: 15px;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.profile-meta {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.profile-stats {
+  display: flex;
+  gap: 16px;
+  font-size: 15px;
+  color: var(--text-secondary);
+}
+
+.profile-stats strong {
+  color: var(--text-primary);
+}
+
+@media (max-width: 1024px) {
+  .right-sidebar {
+    display: none;
+  }
+
+  .right-sidebar.is-open {
+    display: block;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    max-width: 420px;
+    width: 100%;
+    background-color: #e7f0ff;
+    z-index: 110;
+    box-shadow: -6px 0 16px rgba(0, 0, 0, 0.18);
+  }
+
+  .back-button {
+    display: inline-flex;
+  }
+
+  .open-sidebar-button {
+    display: inline-flex;
+  }
+
+  .sidebar-overlay {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 100;
+  }
+}
