@@ -1,9 +1,9 @@
 import { useState, useMemo } from "react";
-import { FaArrowLeft, FaCheckCircle } from 'react-icons/fa';  // FaHome یک آیکون خانه از Font Awesome است
+import { FaArrowLeft, FaCheckCircle } from 'react-icons/fa';  
 import { sampleUsers } from "../../../../database/SampleData.js";
 import "./SideBar.css";
 
-const RightSidebar = ({ userId = "a-partovii" }) => {
+const LeftSidebar = ({ userId = "a-partovii" }) => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
   const user = useMemo(
@@ -12,41 +12,32 @@ const RightSidebar = ({ userId = "a-partovii" }) => {
   );
 
   if (!user) {
-    return <aside className="right-sidebar">کاربر پیدا نشد</aside>;
+    return <aside className="right-sidebar">User not found!!</aside>;
   }
-
-  const bannerSrc = user.profileBanner || "/empty-pfp.png";
-  const avatarSrc = user.profileAvatar || "/empty-pfp.png";
-
   const closeMobile = () => setIsMobileOpen(false);
 
   const content = (
     <>
-      {/* sidebar header با ارتفاع 15px */}
       <div className="sidebar-header">
         <button className="back-button" onClick={closeMobile}>
           <FaArrowLeft />
         </button>
-        <button className="edit-profile-button">Edit profile</button>
         <button className="edit-profile-button">Settings</button>
+        <button className="edit-profile-button">Edit profile</button>
       </div>
 
-      {/* بنر که به دیواره‌های طرفین می‌چسبه */}
       <div className="profile-header">
         <div className="profile-banner">
-          <img src={bannerSrc} />
+          <img src={user.profileBanner} />
         </div>
 
-        {/* آواتار که نصفش روی بنر و نصفش بیرون است - دکمه Edit profile کنارش */}
         <div className="profile-top-row">
-          <img className="avatar-picture" src={avatarSrc} alt={user.name} />
+          <img className="avatar-picture" src={user.profileAvatar} alt={user.name} />
         </div>
       </div>
 
-      {/* محتوای پروفایل با padding عادی */}
       <div className="right-sidebar-content">
         <div className="profile-details">
-          {/* نام و آیدی وسط زیر بنر */}
           <div className="profile-name-section">
             <h3 className="profile-name">{user.name}</h3>
             {user.verified &&
@@ -73,10 +64,7 @@ const RightSidebar = ({ userId = "a-partovii" }) => {
     <>
       <button
         className="open-sidebar-button"
-        onClick={() => setIsMobileOpen(true)}
-      >
-        پروفایل
-      </button>
+        onClick={() => setIsMobileOpen(true)}> OPEN </button>
 
       {isMobileOpen && (
         <div className="sidebar-overlay" onClick={closeMobile}></div>
@@ -89,4 +77,4 @@ const RightSidebar = ({ userId = "a-partovii" }) => {
   );
 };
 
-export default RightSidebar;
+export default LeftSidebar;

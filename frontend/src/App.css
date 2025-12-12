@@ -1,7 +1,6 @@
 .app-shell {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   min-height: 100vh;
   background: #f8fbff;
-  padding: 24px;
 }

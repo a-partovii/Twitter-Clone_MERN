@@ -1,10 +1,10 @@
 import "./App.css";
-import RightSidebar from "./components/SideBar/SideBar";
+import LeftSidebar from "./components/SideBar/SideBar";
 
 function App() {
   return (
     <div className="app-shell">
-      <RightSidebar userId="a-partovii" />
+      <LeftSidebar userId="a-partovii" />
     </div>
   );
 }

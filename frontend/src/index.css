@@ -7,8 +7,13 @@
   --white-hover: #e0e0e0;
 }
 
+
+
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f8fbff;
+  
+  backdrop-filter: blur(2px);
 }
