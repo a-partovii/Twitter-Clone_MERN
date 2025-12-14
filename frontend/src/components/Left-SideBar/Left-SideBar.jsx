@@ -23,7 +23,7 @@ const LeftSidebar = ({ userId = "a-partovii" }) => {
           <FaArrowLeft />
         </button>
         <button className="edit-profile-button">Settings</button>
-        <button className="edit-profile-button">Edit profile</button>
+        <button className="edit-profile-button">Edit Profile</button>
       </div>
 
       <div className="profile-header">
@@ -39,14 +39,20 @@ const LeftSidebar = ({ userId = "a-partovii" }) => {
       <div className="right-sidebar-content">
         <div className="profile-details">
           <div className="profile-name-section">
-            <h3 className="profile-name">{user.name}</h3>
-            {user.verified &&
-             <span className="verified-badge-large"><sub><FaCheckCircle /></sub></span>}
+            <div className="profile-name-row">
+              <h3 className="profile-name">{user.name}</h3>
+              {user.verified &&
+               <span className="verified-badge-large"><sub><FaCheckCircle /></sub></span>}
+            </div>
+            <div className="profile-username">@{user.user_id}</div>
           </div>
+          <fieldset>
+            <legend>Bio</legend>
+              <div className="profile-bio">{user.bio}</div>
+              <br />
+              <div className="profile-meta">Joined {user.joinedDate}</div>
+          </fieldset>
 
-          <div className="profile-username">@{user.user_id}</div>
-          <div className="profile-bio">{user.bio}</div>
-          <div className="profile-meta">Joined {user.joinedDate}</div>
           <div className="profile-stats">
             <span>
               <strong>{user.followingCount}</strong> Following

@@ -129,6 +129,12 @@
 
 .profile-name-section {
   display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile-name-row {
+  display: flex;
   align-items: center;
   gap: 8px;
 }
@@ -162,7 +168,7 @@
 }
 
 .profile-meta {
-  font-size: 14px;
+  font-size: 13px;
   color: var(--text-secondary);
 }
 
