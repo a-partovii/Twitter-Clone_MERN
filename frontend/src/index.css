@@ -5,6 +5,13 @@
   --text-primary: #0F1419;
   --text-secondary: #536471;
   --white-hover: #e0e0e0;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f7f9fa;
+  --bg-hover: #f7f9fa;
+  --border-color: #e1e8ed;
+  --error-color: #f4212e;
+  --retweet-color: #00ba7c;
+  --like-color: #f4212e;
 }
 
 

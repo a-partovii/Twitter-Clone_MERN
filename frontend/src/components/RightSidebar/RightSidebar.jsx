@@ -1,4 +1,5 @@
-// import React from 'react';
+
+// محتوای این کامپوننت موقتیه و احتمالا پنجاه درصدش تغییر می‌کنه
 import './RightSidebar.css';
 
 const RightSidebar = () => {
@@ -15,18 +16,18 @@ const RightSidebar = () => {
           />
         </div>
 
-        {/* Who to follow (static sample data instead of context) */}
+        {/* Who to follow, (static sample data instead of context) */}
         <div className="who-to-follow">
           <h2 className="section-title">Who to follow</h2>
           <div className="users-list">
             <div className="user-card">
               <img
                 src="/pfp-images/pfp+a-partovii.jpg"
-                alt="Ali Partovi"
+                alt="Ash Partovi"
                 className="user-card-avatar"
               />
               <div className="user-card-info">
-                <div className="user-card-name">Ali Partovi</div>
+                <div className="user-card-name">Ash Partovi</div>
                 <div className="user-card-username">@a-partovii</div>
               </div>
               <button className="follow-button">Follow</button>
@@ -63,7 +64,7 @@ const RightSidebar = () => {
             </div>
             <div className="trend-item">
               <div className="trend-category">Entertainment · Trending</div>
-              <div className="trend-name">#WebDevelopment</div>
+              <div className="trend-name">#BrainRot</div>
               <div className="trend-count">5.1K Tweets</div>
             </div>
           </div>
@@ -75,4 +76,3 @@ const RightSidebar = () => {
 };
 
 export default RightSidebar;
-
