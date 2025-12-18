@@ -1,5 +1,5 @@
 import "./App.css";
-import LeftSidebar from "./components/SideBar/SideBar";
+import LeftSidebar from "./components/LeftSidebar/LeftSidebar.jsx";
 
 function App() {
   return (

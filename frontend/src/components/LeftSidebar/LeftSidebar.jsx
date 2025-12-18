@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { FaArrowLeft, FaCheckCircle } from 'react-icons/fa';  
 import { sampleUsers } from "../../../../database/SampleData.js";
-import "./SideBar.css";
+import "./LeftSidebar.css";
 
 const LeftSidebar = ({ userId = "a-partovii" }) => {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
@@ -36,7 +36,7 @@ const LeftSidebar = ({ userId = "a-partovii" }) => {
         </div>
       </div>
 
-      <div className="right-sidebar-content">
+      <div className="sidebar-content">
         <div className="profile-details">
           <div className="profile-name-section">
             <div className="profile-name-row">
@@ -46,12 +46,14 @@ const LeftSidebar = ({ userId = "a-partovii" }) => {
             </div>
             <div className="profile-username">@{user.user_id}</div>
           </div>
-          <fieldset>
+          <div className="profile-bio">
+            <fieldset>
             <legend>Bio</legend>
-              <div className="profile-bio">{user.bio}</div>
+              <div className="bio">{user.bio}</div>
               <br />
               <div className="profile-meta">Joined {user.joinedDate}</div>
-          </fieldset>
+              </fieldset>
+          </div>
 
           <div className="profile-stats">
             <span>

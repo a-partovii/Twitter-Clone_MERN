@@ -5,7 +5,7 @@
   position: sticky;
   top: 0;
   left: 0;
-  border-right: 2px solid #d6e3ff;
+  border-right: 2px solid #e7f0ff;;
   align-self: flex-start;
 }
 
@@ -17,7 +17,7 @@
   justify-content: flex-start;
 }
 
-.right-sidebar-content {
+.sidebar-content {
   padding: 12px 20px 0 20px;
   display: flex;
   flex-direction: column;
@@ -151,7 +151,6 @@
   font-size: 22px;
   padding: 0;
   margin: 0;
-
 }
 
 .profile-username {
@@ -160,11 +159,14 @@
   margin: 0;
 }
 
-.profile-bio {
+.bio {
   font-size: 15px;
   color: var(--text-primary);
   margin: 0;
   line-height: 1.5;
+}
+.profile-bio{
+  margin-left: -8px;
 }
 
 .profile-meta {
@@ -219,3 +221,4 @@
     z-index: 100;
   }
 }
+
