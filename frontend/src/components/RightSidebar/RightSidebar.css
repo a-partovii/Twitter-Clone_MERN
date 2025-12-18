@@ -1,0 +1,175 @@
+.right-sidebar {
+  width: 350px;
+  padding: 0 20px;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.right-sidebar-content {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.search-box {
+  position: relative;
+  background-color: var(--bg-secondary);
+  border-radius: 30px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.search-box:focus-within {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--primary-color);
+}
+
+.search-icon {
+  color: var(--text-secondary);
+  font-size: 18px;
+}
+
+.search-input {
+  flex: 1;
+  background: transparent;
+  font-size: 15px;
+  color: var(--text-primary);
+}
+
+.search-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.section-title {
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--text-primary);
+  padding: 12px 16px;
+  margin: 0;
+}
+
+.who-to-follow,
+.trends {
+  background-color: var(--bg-secondary);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.users-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  transition: background-color 0.2s;
+}
+
+.user-card:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.user-card-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.user-card-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.user-card-name {
+  font-weight: 700;
+  font-size: 15px;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-card-username {
+  font-size: 15px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.follow-button {
+  background-color: var(--text-primary);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  transition: background-color 0.2s;
+}
+
+.follow-button:hover {
+  background-color: #272c30;
+}
+
+.trends-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.trend-item {
+  padding: 12px 16px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.trend-item:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.trend-category {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.trend-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.trend-count {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.show-more {
+  padding: 16px;
+  color: var(--primary-color);
+  font-size: 15px;
+  text-align: right;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.show-more:hover {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+@media (max-width: 1024px) {
+  .right-sidebar {
+    display: none;
+  }
+}
+

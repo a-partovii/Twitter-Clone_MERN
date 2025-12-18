@@ -46,7 +46,7 @@ const LeftSidebar = ({ userId = "a-partovii" }) => {
             </div>
             <div className="profile-username">@{user.user_id}</div>
           </div>
-          <div className="profile-bio">
+          <div className="profile-bio-container">
             <fieldset>
             <legend>Bio</legend>
               <div className="bio">{user.bio}</div>

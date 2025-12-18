@@ -165,8 +165,28 @@
   margin: 0;
   line-height: 1.5;
 }
-.profile-bio{
-  margin-left: -8px;
+
+.profile-bio-container fieldset {
+  border: 2px solid #dbe3ff;
+  border-radius: 10px;
+  padding: 8px 16px 16px;
+  margin-left: -16px;
+  background-color: #eff4ff;
+}
+
+.profile-bio-container fieldset > legend {
+  background-color: #eff4ff;
+  padding: 2px 12px 2px;
+  border-radius: 6px;
+  font-weight: 500;
+  color: var(--text-primary);
+  box-shadow: 0 0 0 2px #dee6f7;
+}
+
+.profile-meta {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 8px;
 }
 
 .profile-meta {

@@ -15,5 +15,5 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f8fbff;
   
-  backdrop-filter: blur(2px);
+  /* backdrop-filter: blur(2px); */
 }
