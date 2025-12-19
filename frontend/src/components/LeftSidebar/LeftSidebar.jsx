@@ -12,7 +12,7 @@ const LeftSidebar = ({ userId = "a-partovii" }) => {
   );
 
   if (!user) {
-    return <aside className="right-sidebar">User not found!!</aside>;
+    return <aside className="Left-sidebar">User not found!!</aside>;
   }
   const closeMobile = () => setIsMobileOpen(false);
 
@@ -78,7 +78,7 @@ const LeftSidebar = ({ userId = "a-partovii" }) => {
         <div className="sidebar-overlay" onClick={closeMobile}></div>
       )}
 
-      <aside className={`right-sidebar ${isMobileOpen ? "is-open" : ""}`}>
+      <aside className={`Left-sidebar ${isMobileOpen ? "is-open" : ""}`}>
         {content}
       </aside>
     </>

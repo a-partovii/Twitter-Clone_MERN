@@ -1,3 +1,34 @@
+.feed-container {
+  flex: 1;
+  max-width: 650px;
+  min-height: 100vh;
+  background-color: var(--bg-primary, #ffffff);
+  border-left: 1px solid var(--border-color, #e1e8ed);
+  border-right: 1px solid var(--border-color, #e1e8ed);
+}
+
+.feed-header {
+  position: sticky;
+  top: 0;
+  background-color: var(--bg-primary, #ffffff);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border-color, #e1e8ed);
+  padding: 12px 16px;
+  z-index: 10;
+}
+
+.feed-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text-primary, #0F1419);
+}
+
+.feed-tweets {
+  display: flex;
+  flex-direction: column;
+}
+
 .tweet {
   display: flex;
   gap: 12px;
@@ -25,9 +56,9 @@
   transition: opacity 0.2s;
 }
 
-.tweet-avatar img:hover {
+/* .tweet-avatar img:hover {
   opacity: 0.8;
-}
+} */
 
 .tweet-content {
   flex: 1;
@@ -151,9 +182,9 @@
 
 .tweet-image-container {
   margin: 12px 0;
-  border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--border-color);
+  border-radius: 16px;
 }
 
 .tweet-image {
@@ -225,48 +256,18 @@
   font-weight: 400;
 }
 
-.feed-container {
-  flex: 1;
-  max-width: 600px;
-  border-left: 1px solid var(--border-color, #e1e8ed);
-  border-right: 1px solid var(--border-color, #e1e8ed);
-  background-color: var(--bg-primary, #ffffff);
-  min-height: 100vh;
-}
-
-.feed-header {
-  position: sticky;
-  top: 0;
-  background-color: var(--bg-primary, #ffffff);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border-color, #e1e8ed);
-  padding: 12px 16px;
-  z-index: 10;
-}
-
-.feed-header h2 {
-  margin: 0;
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--text-primary, #0F1419);
-}
-
-.feed-tweets {
-  display: flex;
-  flex-direction: column;
-}
-
+/*-----------------------------------*/
 @media (max-width: 768px) {
   .tweet-actions {
     max-width: 100%;
   }
-  
+   .feed-container {
+    max-width: 100%;
+  }
   .tweet-action span {
     display: none;
   }
   
-  .feed-container {
-    max-width: 100%;
-  }
+ 
 }
 

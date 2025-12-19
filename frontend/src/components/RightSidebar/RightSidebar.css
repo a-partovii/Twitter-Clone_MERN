@@ -1,9 +1,12 @@
 .right-sidebar {
-  width: 350px;
+  background-color: #e7f0ff;
+  width: 20%;
+  min-width: 300px;
+  height: 100vh;
   padding: 0 20px;
   position: sticky;
   top: 0;
-  height: 100vh;
+  
   overflow-y: auto;
 }
 
@@ -167,7 +170,7 @@
   background-color: rgba(0, 0, 0, 0.03);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1100px) {
   .right-sidebar {
     display: none;
   }

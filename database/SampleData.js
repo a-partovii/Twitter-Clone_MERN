@@ -26,7 +26,7 @@ export const sampleUsers = [
         get followersCount() { return this.followersList.length; },
         get followingCount() { return this.followingList.length; },
         joinedDate: 'January 2025',
-        verified: true
+        verified: false
         },
         {
         user_id: 'meowmeowmeow',
@@ -66,7 +66,7 @@ export const sampleTweets = [
     },
     {
       id: 't2',
-      text: 'Beautiful!🌅 Nature never fails to amaze me.',
+      text: 'Nature never fails to amaze me🌅',
       image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800',
       authorId: 'meowmeowmeow',
       createdAt: new Date(Date.now() - 5 * 60 * 60 * 1000).toISOString(),

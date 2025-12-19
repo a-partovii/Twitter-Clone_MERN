@@ -1,10 +1,10 @@
-.right-sidebar {
+.Left-sidebar {
   background-color: #e7f0ff;
   height: 100vh;
   width: 20%;
+  min-width: 300px;
   position: sticky;
   top: 0;
-  left: 0;
   border-right: 2px solid #e7f0ff;;
   align-self: flex-start;
 }
@@ -205,12 +205,12 @@
   color: var(--text-primary);
 }
 /*----------------------------------*/
-@media (max-width: 1024px) {
-  .right-sidebar {
+@media (max-width: 800px) {
+  .Left-sidebar {
     display: none;
   }
 
-  .right-sidebar.is-open {
+  .Left-sidebar.is-open {
     display: block;
     position: fixed;
     left: 0;
