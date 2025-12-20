@@ -1,5 +1,5 @@
-
 // محتوای این کامپوننت موقتیه و احتمالا پنجاه درصدش تغییر می‌کنه
+import { FaSearch } from 'react-icons/fa';
 import './RightSidebar.css';
 
 const RightSidebar = () => {
@@ -8,7 +8,8 @@ const RightSidebar = () => {
       <div className="right-sidebar-content">
         {/* Search */}
         <div className="search-box">
-          <i className="fas fa-search search-icon"></i>
+        <FaSearch className="search-icon"
+         />
           <input 
             type="text" 
             placeholder="Search Twitter" 

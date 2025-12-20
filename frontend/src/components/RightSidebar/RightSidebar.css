@@ -9,6 +9,14 @@
   
   overflow-y: auto;
 }
+.sidebar-header {
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom: 2px solid var(--border-color);
+}
 
 .right-sidebar-content {
   padding: 20px 0;
