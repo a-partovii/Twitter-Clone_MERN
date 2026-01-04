@@ -1,0 +1,148 @@
+/* src/components/LoginModal.css */
+
+
+.lm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; 
+}
+
+.lm-container {
+  background-color: var(--twitter-white);
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  min-height: 400px;
+  max-height: 650px;
+  border-radius: 16px;
+  padding: 0 32px 32px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0px 0px 15px rgba(0,0,0,0.1); 
+}
+
+/* --- Header --- */
+.lm-header {
+  display: flex;
+  align-items: center;
+  height: 53px;
+  margin-bottom: 20px;
+  position: relative;
+  border-bottom: 1px solid var(--twitter-gray);
+}
+
+.lm-close-btn {
+  position: absolute;
+  left: -8px;
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  color: var(--twitter-black);
+}
+
+.lm-close-btn:hover {
+  background-color: rgba(15, 20, 25, 0.1);
+}
+
+.lm-logo {
+  margin: 0 auto;
+  color: var(--twitter-blue);
+  font-size: 30px;
+}
+
+/* --- Body --- */
+.lm-body {
+  max-width: 364px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex; 
+  flex-direction: column;
+}
+
+.lm-title {
+  font-size: 31px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: var(--twitter-black);
+  text-align: left; 
+}
+
+/* --- Inputs --- */
+.lm-input-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.lm-input {
+  width: 100%;
+  padding: 16px 12px;
+  font-size: 17px;
+  border: 1px solid var(--twitter-gray);
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.2s;
+  color: var(--twitter-black);
+  background-color: var(--twitter-white);
+}
+
+.lm-input:focus {
+  border: 1px solid var(--twitter-blue);
+  box-shadow: 0 0 0 1px var(--twitter-blue);
+}
+
+/* --- Buttons --- */
+.lm-submit-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 25px;
+  background-color: var(--twitter-black);
+  color: var(--twitter-white);
+  font-weight: 700;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.lm-submit-btn:hover {
+  background-color: #272c30;
+}
+
+.lm-forgot-btn {
+  width: 100%;
+  padding: 10px;
+  border-radius: 25px;
+  background-color: var(--twitter-white);
+  border: 1px solid var(--twitter-gray);
+  color: var(--twitter-black);
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+/* --- Footer --- */
+.lm-footer {
+  margin-top: 24px;
+  text-align: center;
+  font-size: 15px;
+  color: #536471;
+}
+
+.lm-link {
+  color: var(--twitter-blue);
+  cursor: pointer;
+  margin-left: 5px;
+}

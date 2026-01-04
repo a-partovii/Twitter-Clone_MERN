@@ -1,0 +1,155 @@
+/* src/components/SignupModal.css */
+
+.sm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.sm-container {
+  background-color: var(--twitter-white);
+  width: 100%;
+  max-width: 600px;
+  height: 90vh; 
+  max-height: 650px;
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header --- */
+.sm-header {
+  display: flex;
+  align-items: center;
+  height: 53px;
+  min-height: 53px;
+  padding: 0 16px;
+  z-index: 10;
+  border-bottom: 1px solid var(--twitter-gray);
+}
+
+.sm-close-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  color: var(--twitter-black);
+}
+
+.sm-close-btn:hover {
+  background-color: rgba(15, 20, 25, 0.1);
+}
+
+.sm-logo {
+  margin: 0 auto;
+  color: var(--twitter-blue);
+  font-size: 24px;
+  transform: translateX(-20px);
+}
+
+/* --- Scrollable Content Area --- */
+
+.sm-content-scrollable {
+  flex: 1; 
+  overflow-y: auto; 
+  width: 98.2%;
+  scrollbar-width: thin;
+}
+
+.sm-content-scrollable::-webkit-scrollbar {
+  width: 8px;
+}
+.sm-content-scrollable::-webkit-scrollbar-thumb {
+  background-color: #cfd9de;
+  border-radius: 4px;
+}
+.sm-content-scrollable::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+
+/* --- Body --- */
+.sm-body {
+  max-width: 440px; 
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 32px 32px 32px;
+}
+
+.sm-title {
+  font-size: 31px;
+  font-weight: 700;
+  margin: 20px 0 30px;
+  color: var(--twitter-black);
+  text-align: left;
+}
+
+/* --- Inputs --- */
+.sm-input-group {
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.sm-input {
+  width: 100%;
+  padding: 16px 12px;
+  font-size: 17px;
+  border: 1px solid var(--twitter-gray);
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.2s;
+  color: var(--twitter-black);
+  background-color: var(--twitter-white);
+}
+
+.sm-input:focus {
+  border: 1px solid var(--twitter-blue);
+  box-shadow: 0 0 0 1px var(--twitter-blue);
+}
+
+/* --- Date of Birth --- */
+.sm-dob-label {
+  display: block;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: var(--twitter-black);
+}
+
+.sm-dob-desc {
+  font-size: 14px;
+  color: #536471;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+/* --- Submit Button --- */
+.sm-submit-btn {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  background-color: var(--twitter-black);
+  color: var(--twitter-white);
+  font-weight: 700;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.sm-submit-btn:hover {
+  background-color: #272c30;
+}
