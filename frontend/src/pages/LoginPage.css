@@ -1,42 +1,45 @@
 /* src/pages/LoginPages.css */
 
-/* Global Reset */
+/* Global Page Reset */
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
-  height: 100%;
-  overflow-x: hidden;
+  /* Removing overflow-x allows natural scrolling when zoomed in */
 }
 
 .login-container {
   display: flex;
-  width: 100vw;
-  height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  /* Fixed: Prevent shrinking */
-  min-width: 320px; 
+  width: 100%;
+  /* Use min-height instead of fixed height to support zooming */
+  min-height: 100vh; 
+  font-family: var(--font-primary);
 }
 
 /* =========================================
    Left Side (Blue Section)
    ========================================= */
 .left-side {
-  flex: 1; 
-  background-color: #1DA1F2;
+  flex: 1.1; /* Takes slightly more width */
+  background-color: var(--twitter-blue);
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: var(--twitter-white);
   position: relative;
   overflow: hidden;
-  /* Fixed: Ensure it doesn't disappear prematurely */
-  min-width: 300px; 
+  
+  /* Shrink logic: allows this section to get smaller but not disappear instantly */
+  min-width: 0; 
+  
+  /* Safe padding from edges */
+  padding: 40px; 
 }
 
+/* Large Background Logo */
 .bg-logo {
   position: absolute;
-  font-size: 130vh;
+  font-size: 140vh;
   color: rgba(255, 255, 255, 0.1);
   top: 50%;
   right: -30%;
@@ -51,7 +54,8 @@ html, body {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  font-size: clamp(1rem, 2vw, 1.5rem); 
+  /* Responsive font size */
+  font-size: clamp(1.2rem, 2vw, 1.5rem); 
   font-weight: 700;
   z-index: 1;
 }
@@ -66,53 +70,55 @@ html, body {
    Right Side (White Section)
    ========================================= */
 .right-side {
-  flex: 1;
-  background-color: white;
+  flex: 0.9;
+  background-color: var(--twitter-white);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; /* Center horizontally by default */
-  padding: 20px;
+  align-items: center;
   
-  /* Fixed: Prevent right side from disappearing */
-  min-width: 300px; 
+  /* Safe padding from edges (Crucial for zooming) */
+  padding: 40px;
+  
+  /* Ensure this section never gets too squeezed */
+  min-width: 350px; 
+  z-index: 10;
 }
 
 .content-wrapper {
   width: 100%;
-  max-width: clamp(300px, 80%, 600px);
-  /* Default: Left aligned for desktop */
-  text-align: left; 
+  max-width: 550px;
+  text-align: left;
 }
 
 .twitter-logo-small {
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  color: #1DA1F2;
-  margin-bottom: clamp(20px, 3vw, 40px);
+  font-size: 3rem;
+  color: var(--twitter-blue);
+  margin-bottom: 40px;
 }
 
 .big-title {
-  font-size: clamp(30px, 5vw, 64px);
+  font-size: clamp(2.5rem, 4vw, 4rem);
   font-weight: 900;
-  margin-bottom: clamp(30px, 4vw, 50px);
-  color: black;
+  margin-bottom: 40px;
+  color: var(--twitter-black);
   line-height: 1.2;
 }
 
 .sub-title {
-  font-size: clamp(20px, 3vw, 32px);
+  font-size: 2rem;
   font-weight: 800;
-  margin-bottom: clamp(20px, 3vw, 30px);
-  color: black;
+  margin-bottom: 30px;
+  color: var(--twitter-black);
 }
 
-/* Buttons */
+/* Buttons Section */
 .buttons-wrapper {
   display: flex;
   flex-direction: column;
   gap: 15px;
   width: 100%;
-  max-width: 400px;
+  max-width: 380px;
 }
 
 .btn {
@@ -122,54 +128,56 @@ html, body {
   font-weight: bold;
   cursor: pointer;
   width: 100%;
-  transition: 0.2s;
+  transition: background-color 0.2s;
   border: 1px solid transparent;
 }
 
 .btn-signup {
-  background-color: #1DA1F2;
-  color: white;
+  background-color: var(--twitter-blue);
+  color: var(--twitter-white);
 }
-.btn-signup:hover { background-color: #1a91da; }
+.btn-signup:hover { background-color: var(--twitter-blue-hover); }
 
 .btn-login {
-  background-color: white;
-  color: #1DA1F2;
-  border-color: #cfd9de;
+  background-color: var(--twitter-white);
+  color: var(--twitter-blue);
+  border-color: var(--twitter-gray);
 }
-.btn-login:hover { background-color: #f0f7fd; }
+.btn-login:hover { background-color: var(--twitter-bg-gray); }
 
 
 /* =========================================
-   Mobile View (Viewport < 850px)
+   Mobile / Tablet View (Viewport < 900px)
    ========================================= */
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   
-  /* 1. Hide left side */
+  /* Hide the blue section on mobile */
   .left-side {
     display: none !important;
   }
 
-  /* 2. Right side takes full width & Center aligned */
   .right-side {
-    flex: none;
+    flex: 1;
+    min-width: 0;
     width: 100%;
-    height: 100vh;
-    padding: 20px;
-    align-items: center; /* Fixed: Center items horizontally */
+    
+    /* Allow height to grow with content (scrolling enabled) */
+    height: auto; 
+    min-height: 100vh;
+    
+    /* Smaller safe padding for mobile */
+    padding: 40px 20px; 
   }
 
-  /* 3. Content centered */
+  /* Center alignment for mobile */
   .content-wrapper {
-    max-width: 100%;
-    text-align: center; /* Fixed: Center text */
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Fixed: Center children (buttons, logo) */
+    align-items: center;
   }
 
-  /* 4. Font adjustments */
   .big-title {
-    font-size: 2.8rem;
+    font-size: 3rem;
   }
 }
