@@ -1,0 +1,175 @@
+/* src/pages/LoginPages.css */
+
+/* Global Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.login-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* Fixed: Prevent shrinking */
+  min-width: 320px; 
+}
+
+/* =========================================
+   Left Side (Blue Section)
+   ========================================= */
+.left-side {
+  flex: 1; 
+  background-color: #1DA1F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  /* Fixed: Ensure it doesn't disappear prematurely */
+  min-width: 300px; 
+}
+
+.bg-logo {
+  position: absolute;
+  font-size: 130vh;
+  color: rgba(255, 255, 255, 0.1);
+  top: 50%;
+  right: -30%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-size: clamp(1rem, 2vw, 1.5rem); 
+  font-weight: 700;
+  z-index: 1;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* =========================================
+   Right Side (White Section)
+   ========================================= */
+.right-side {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; /* Center horizontally by default */
+  padding: 20px;
+  
+  /* Fixed: Prevent right side from disappearing */
+  min-width: 300px; 
+}
+
+.content-wrapper {
+  width: 100%;
+  max-width: clamp(300px, 80%, 600px);
+  /* Default: Left aligned for desktop */
+  text-align: left; 
+}
+
+.twitter-logo-small {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  color: #1DA1F2;
+  margin-bottom: clamp(20px, 3vw, 40px);
+}
+
+.big-title {
+  font-size: clamp(30px, 5vw, 64px);
+  font-weight: 900;
+  margin-bottom: clamp(30px, 4vw, 50px);
+  color: black;
+  line-height: 1.2;
+}
+
+.sub-title {
+  font-size: clamp(20px, 3vw, 32px);
+  font-weight: 800;
+  margin-bottom: clamp(20px, 3vw, 30px);
+  color: black;
+}
+
+/* Buttons */
+.buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.btn {
+  padding: 12px 0;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.2s;
+  border: 1px solid transparent;
+}
+
+.btn-signup {
+  background-color: #1DA1F2;
+  color: white;
+}
+.btn-signup:hover { background-color: #1a91da; }
+
+.btn-login {
+  background-color: white;
+  color: #1DA1F2;
+  border-color: #cfd9de;
+}
+.btn-login:hover { background-color: #f0f7fd; }
+
+
+/* =========================================
+   Mobile View (Viewport < 850px)
+   ========================================= */
+@media (max-width: 850px) {
+  
+  /* 1. Hide left side */
+  .left-side {
+    display: none !important;
+  }
+
+  /* 2. Right side takes full width & Center aligned */
+  .right-side {
+    flex: none;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    align-items: center; /* Fixed: Center items horizontally */
+  }
+
+  /* 3. Content centered */
+  .content-wrapper {
+    max-width: 100%;
+    text-align: center; /* Fixed: Center text */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Fixed: Center children (buttons, logo) */
+  }
+
+  /* 4. Font adjustments */
+  .big-title {
+    font-size: 2.8rem;
+  }
+}
