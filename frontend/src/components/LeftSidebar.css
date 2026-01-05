@@ -1,18 +1,21 @@
 .left-sidebar {
   /* اسکرول نخواهد داشت */
   position: static;         /* یا اگر قبلاً sticky بود، بردار */
-  height: auto;             /* نه 100vh */
-  max-height: none;
+  height: 100%;             /* نه 100vh */
+  /* max-height: none; */
   overflow-y: visible;      /* اسکرول عمودی ممنوع */
 
-  width: 275px;
+  min-width: 275px;
+  max-width: 275px;
+
   padding: 20px;
   display: flex;
   flex-direction: column;
 
-  /* این اجازه می‌دهد اگر محتوا زیاد شد، بدنه صفحه اسکرول بخورد،
+  /* این اجازه می‌دهد اگر محشتوا زیاد شد، بدنه صفحه اسکرول بخورد،
      نه خود سایدبار */
   flex-shrink: 0;
+  
 }
 
 
@@ -138,7 +141,13 @@
   font-size: 14px;
   margin: 0;
 }
-
 .mini-dots {
   color: var(--text-primary);
+  font-size: 16px;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.sidebar-profile-mini:hover .mini-dots {
+  opacity: 1;
 }
