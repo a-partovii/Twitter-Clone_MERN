@@ -1,20 +1,33 @@
 /* src/index.css */
 
-/* Import Nunito font from Google Fonts (Similar to Twitter's Chirp font) */
+/* 1. Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap');
 
-/* Define CSS Variables for Global Usage */
+/* 2. Global Variables (Best Practice: Use :root) */
 :root {
+  /* Brand Colors */
   --twitter-blue: #1DA1F2;
   --twitter-blue-hover: #1a91da;
-  --twitter-white: #ffffff;
   --twitter-black: #000000;
+  --twitter-white: #ffffff;
   --twitter-gray: #cfd9de;
   --twitter-bg-gray: #f5f8fa;
+
+  /* Text Colors */
+  --text-primary: #0F1419;
+  --text-secondary: #536471;
+
+  /* Action Colors */
+  --error-color: #f4212e;
+  --retweet-color: #00ba7c;
+  --like-color: #f4212e;
+  --fave-color: #e2db0a;
   
+  /* Fonts */
   --font-primary: 'Nunito', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* 3. Reset & Base Styles */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,5 +39,6 @@ body {
   padding: 0;
   font-family: var(--font-primary);
   background-color: var(--twitter-white);
-  -webkit-font-smoothing: antialiased; /* Smoother fonts on Mac */
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased; /* فونت نرم‌تر برای مک */
 }

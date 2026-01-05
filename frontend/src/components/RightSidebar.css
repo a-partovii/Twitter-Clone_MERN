@@ -1,0 +1,149 @@
+.right-sidebar {
+  width: 350px;
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: var(--font-primary, system-ui);
+}
+
+/* Search box */
+.right-search-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding-bottom: 8px;
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+}
+
+.right-search-input {
+  width: 100%;
+  height: 42px;
+  border-radius: 9999px;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  background-color: var(--twitter-bg-gray);
+  font-size: 14px;
+}
+
+.right-search-input::placeholder {
+  color: var(--text-secondary);
+}
+
+/* Cards */
+.right-card {
+  background-color: var(--twitter-bg-gray);
+  border-radius: 16px;
+  padding: 12px 16px;
+}
+
+.right-card-title {
+  font-size: 18px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+/* Trends */
+.trend-item {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 8px 0;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.trend-item:hover {
+  background-color: #e8f5fe;
+}
+
+.trend-category {
+  display: block;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.trend-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.trend-tweets {
+  display: block;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* Who to follow */
+.follow-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0;
+}
+
+.follow-item:hover {
+  background-color: #e8f5fe;
+  border-radius: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.follow-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--twitter-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: white;
+}
+
+.follow-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.follow-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.follow-username {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.follow-btn {
+  background-color: var(--twitter-black);
+  color: var(--twitter-white);
+  border: none;
+  border-radius: 9999px;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.follow-btn:hover {
+  background-color: #272c30;
+}
+
+/* Show more */
+.right-card-footer {
+  margin-top: 8px;
+  background: transparent;
+  border: none;
+  color: var(--twitter-blue);
+  font-size: 14px;
+  cursor: pointer;
+}

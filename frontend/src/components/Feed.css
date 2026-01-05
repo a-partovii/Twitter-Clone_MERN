@@ -1,0 +1,208 @@
+/* Container */
+.feed-container {
+  /* فید باید پر شود ولی اسکرول صفحه اصلی را بگیرد */
+  width: 100%;
+  max-width: 600px; /* استاندارد توییتر */
+}
+
+/* Header (Sticky Home) */
+.feed-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.85); /* شیشه‌ای */
+  backdrop-filter: blur(12px);
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--twitter-gray);
+  cursor: pointer;
+}
+
+.feed-header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--text-primary);
+}
+
+/* Tweet Structure */
+.tweet {
+  display: flex;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--twitter-gray);
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.tweet:hover {
+  background-color: var(--bg-hover); /* کمی تیره شدن در هاور */
+}
+
+.tweet-avatar-section {
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.tweet-content {
+  flex: 1;
+  min-width: 0; /* جلوگیری از سرریز متن */
+}
+
+/* Tweet Header */
+.tweet-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.tweet-author-info {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.tweet-author-name {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.verified-badge {
+  color: var(--twitter-blue);
+  font-size: 14px;
+}
+
+.tweet-author-username,
+.tweet-separator,
+.tweet-date {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.tweet-author-username {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Tweet Menu (Dots) */
+.tweet-menu-container {
+  position: relative;
+}
+
+.icon-button {
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.icon-button:hover {
+  background-color: rgba(29, 155, 240, 0.1);
+  color: var(--twitter-blue);
+}
+
+/* Tweet Body */
+.tweet-text {
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  white-space: pre-wrap; /* حفظ خط‌کشی‌ها */
+  word-wrap: break-word;
+}
+
+/* Tweet Image */
+.tweet-image-container {
+  margin-top: 10px;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--twitter-gray);
+}
+
+.tweet-image {
+  width: 100%;
+  display: block;
+}
+
+/* Action Buttons (Like, Retweet, etc) */
+.tweet-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  max-width: 425px; /* دکمه‌ها خیلی پخش نشوند */
+}
+
+.tweet-action-btn {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 4px; /* فاصله عدد تا آیکون */
+  color: var(--text-secondary);
+  font-size: 13px;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.icon-wrapper {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s;
+  font-size: 18px;
+}
+
+/* Action Colors & Hover Effects */
+
+/* Reply (Blue) */
+.tweet-action-btn.reply:hover {
+  color: var(--twitter-blue);
+}
+.tweet-action-btn.reply:hover .icon-wrapper {
+  background-color: rgba(29, 155, 240, 0.1);
+}
+
+/* Retweet (Green) */
+.tweet-action-btn.retweet:hover,
+.tweet-action-btn.retweet.active {
+  color: var(--retweet-color);
+}
+.tweet-action-btn.retweet:hover .icon-wrapper {
+  background-color: rgba(0, 186, 124, 0.1);
+}
+
+/* Like (Pink/Red) */
+.tweet-action-btn.like:hover,
+.tweet-action-btn.like.active {
+  color: var(--fave-color);
+}
+.tweet-action-btn.like:hover .icon-wrapper {
+  background-color: rgba(241, 249, 24, 0.1);
+}
+.tweet-action-btn.like.active svg {
+  fill: var(--fave-color); /* پر کردن قلب */
+}
+
+/* Bookmark & Share (Blue) */
+.tweet-action-btn.bookmark:hover,
+.tweet-action-btn.bookmark.active,
+.tweet-action-btn.share:hover {
+  color: var(--twitter-blue);
+}
+.tweet-action-btn.bookmark:hover .icon-wrapper,
+.tweet-action-btn.share:hover .icon-wrapper {
+  background-color: rgba(29, 155, 240, 0.1);
+}

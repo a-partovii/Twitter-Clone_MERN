@@ -1,0 +1,144 @@
+.left-sidebar {
+  /* اسکرول نخواهد داشت */
+  position: static;         /* یا اگر قبلاً sticky بود، بردار */
+  height: auto;             /* نه 100vh */
+  max-height: none;
+  overflow-y: visible;      /* اسکرول عمودی ممنوع */
+
+  width: 275px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+
+  /* این اجازه می‌دهد اگر محتوا زیاد شد، بدنه صفحه اسکرول بخورد،
+     نه خود سایدبار */
+  flex-shrink: 0;
+}
+
+
+/* لوگو */
+.sidebar-logo {
+  color: var(--twitter-blue);
+  font-size: 30px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* گزینه‌های منو */
+.sidebar-option {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.2s ease-in;
+  color: var(--text-primary);
+  margin-bottom: 5px;
+}
+
+.sidebar-option:hover {
+  /* هاور آبی کم‌رنگ توییتر */
+  background-color: #e8f5fe; 
+  color: var(--twitter-blue);
+}
+
+.sidebar-option h2 {
+  font-weight: 700;
+  font-size: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.sidebar-option svg {
+  font-size: 26px;
+}
+
+/* گزینه فعال (مثل Home) */
+.sidebar-option-active {
+  color: var(--twitter-blue);
+}
+
+/* دکمه توییت بزرگ */
+/* دکمه توییت بزرگ و مدرن */
+.sidebar-tweet-btn {
+  background-color: var(--twitter-blue);
+  border: none;
+  color: white;
+  font-weight: 750; /* کمی ضخیم‌تر برای خوانایی بهتر */
+  text-transform: inherit;
+  border-radius: 9999px; /* کاملاً گرد (Pill Shape) */
+  height: 50px; /* کمی بلندتر */
+  width: 100%; /* عرض ثابت */
+  max-width: 275px; /* عرض ثابت */
+  margin-top: 25px;
+  margin-bottom: 25px;
+  cursor: pointer;
+  font-size: 17px;
+  flex-shrink: 0;
+  align-self: flex-start;
+  
+  /* افکت سایه ملایم همرنگ خود دکمه */
+  box-shadow: 0 4px 14px 0 rgba(29, 161, 242, 0.39);
+  
+  transition: all 0.2s ease-in-out; /* انیمیشن نرم */
+}
+
+/* افکت هاور */
+.sidebar-tweet-btn:hover {
+  background-color: var(--twitter-blue-hover);
+  /* در هاور سایه کمی بیشتر شود */
+  box-shadow: 0 6px 20px rgba(29, 161, 242, 0.23);
+  transform: translateY(-1px); /* دکمه کمی بالا بیاید */
+}
+
+/* افکت کلیک */
+.sidebar-tweet-btn:active {
+  transform: translateY(1px); /* دکمه پایین برود (حس کلیک شدن) */
+  box-shadow: none;
+}
+/* پروفایل کوچک پایین */
+.sidebar-profile-mini {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: auto; /* چسبیدن به پایین */
+  margin-bottom: 10px;
+  transition: background-color 0.2s;
+  
+}
+
+.sidebar-profile-mini:hover {
+  background-color: #e7e7e8;
+}
+
+.mini-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.mini-info {
+  flex: 1;
+  margin-left: 5px;
+}
+
+.mini-info h4 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.mini-info p {
+  color: var(--text-secondary);
+  font-size: 14px;
+  margin: 0;
+}
+
+.mini-dots {
+  color: var(--text-primary);
+}

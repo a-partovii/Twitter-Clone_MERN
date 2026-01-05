@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./SignupModal.css"; // Imports the scoped styles with 'sm-' prefix
 import { FaTwitter, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const SignupModal = ({ onClose }) => {
   // 1. State management for form inputs
@@ -9,9 +10,12 @@ const SignupModal = ({ onClose }) => {
   const [dob, setDob] = useState(""); // Date of Birth
 
   // 2. Form submission handler
+  const navigate = useNavigate();
+  
   const handleSignup = (e) => {
     e.preventDefault();
     console.log("Signup Data Submitted:", { name, email, dob });
+    navigate("/home");
     // TODO: Connect to backend API
   };
 

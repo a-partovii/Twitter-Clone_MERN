@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import "./LoginModal.css";
 import { FaTwitter, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const LoginModal = ({ onClose, onSwitchToSignup }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const navigate = useNavigate();
+
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log("Login Attempt:", { email, password });
+    navigate('/home');
   };
 
   return (
