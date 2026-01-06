@@ -1,0 +1,59 @@
+/* Loading state */
+.home-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.home-container {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  background-color: #ffffff;
+}
+
+.left-sidebar {
+  width: 275px;
+  height: 100vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+}
+
+.feed-container {
+  flex: 1;
+  max-width: 600px;
+  min-height: 100vh;
+  margin-left: 2px;
+  overflow-y: auto;
+}
+
+.right-sidebar {
+  width: 350px;
+  height: 100vh;
+  overflow-y: auto;
+  position: sticky;
+  top: 0;
+  margin-left: 1px;
+  align-self: flex-start;
+}
+
+.border {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: #EFF3F4;
+}
+
+.left-border {
+  left: 274px;
+}
+
+.right-border {
+  left: calc(275px + 2px + 600px + 2px);
+}

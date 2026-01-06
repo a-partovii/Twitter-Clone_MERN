@@ -1,0 +1,147 @@
+.login-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Nunito', sans-serif;
+  background-color: #ffffff;
+  transition: filter 0.3s ease;
+}
+
+.modal-blur {
+  pointer-events: none;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  pointer-events: all;
+}
+
+.left-side {
+  flex: 1.1;
+  background-color: #1DA1F2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  padding: 40px;
+}
+
+.bg-logo {
+  position: absolute;
+  font-size: 140vh;
+  color: rgba(255, 255, 255, 0.1);
+  top: 50%;
+  right: -30%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-size: clamp(1.2rem, 2vw, 1.5rem);
+  font-weight: 700;
+  z-index: 1;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.right-side {
+  flex: 0.9;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  min-width: 350px;
+}
+
+.content-wrapper {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.twitter-logo-small {
+  font-size: 3rem;
+  color: #1DA1F2;
+  margin-bottom: 40px;
+}
+
+.big-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 900;
+  margin-bottom: 40px;
+  color: #0F1419;
+  line-height: 1.1;
+}
+
+.sub-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: #0F1419;
+}
+
+.buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 380px;
+}
+
+.btn {
+  padding: 12px;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-signup {
+  background-color: #1DA1F2;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-login {
+  background-color: #ffffff;
+  color: #1DA1F2;
+  border: 1px solid #cfd9de;
+}
+
+.loading-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .left-side {
+    display: none;
+  }
+
+  .right-side {
+    flex: 1;
+    padding: 20px;
+  }
+}
