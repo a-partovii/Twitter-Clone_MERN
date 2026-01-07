@@ -1,0 +1,100 @@
+[
+  {
+    "user_id": "a-partovii",
+    "passsword": "11112222",
+    "name": "Ashkan Partovi",
+    "email": "ap@gmail.com",
+    "bio": "Lifelong Learner, for real!",
+    "profileAvatar": "/pfp-images/pfp+a-partovii.jpg",
+    "profileBanner": "/banner-images/banner+a-partovii.jpg",
+    "followersList": [
+      "aaffaas",
+      "meowmeowmeow",
+      "safa-mh",
+      "safa",
+      "Mojavad"
+    ],
+    "followingList": [
+      "aaffaas",
+      "meowmeowmeow",
+      "Mojavad"
+    ],
+    "joinedDate": "January 2024",
+    "verified": true
+  },
+  {
+    "user_id": "safa",
+    "passsword": "11112222",
+    "name": "Mohammadhosein",
+    "email": "Mohamad@gmail.com",
+    "bio": "Programmer and Chess Player",
+    "profileAvatar": "",
+    "profileBanner": "",
+    "followersList": [
+      "a-partovii",
+      "Mojavad"
+    ],
+    "followingList": [
+      "a-partovii",
+      "Mojavad",
+      "meowmeowmeow",
+      "safa-mh"
+    ],
+    "joinedDate": "January 2025",
+    "verified": true
+  },
+  {
+    "user_id": "meowmeowmeow",
+    "passsword": "11112222",
+    "name": "Mr. Meow",
+    "email": "meow@gmail.com",
+    "bio": "right that stuff",
+    "profileAvatar": "",
+    "profileBanner": "",
+    "followersList": [
+      "a-partovii",
+      "safa-mh",
+      "safa"
+    ],
+    "followingList": [
+      "a-partovii"
+    ],
+    "joinedDate": "January 2026",
+    "verified": false
+  },
+  {
+    "user_id": "Mojavad",
+    "passsword": "11111111",
+    "name": "Mohammad Javad",
+    "email": "javad@gmail.com",
+    "bio": "الهی، همان که تو خواهی",
+    "profileAvatar": "",
+    "profileBanner": "",
+    "followersList": [
+      "a-partovii",
+      "safa"
+    ],
+    "followingList": [
+      "safa",
+      "a-partovii"
+    ],
+    "joinedDate": "January 2025",
+    "verified": false
+  },
+  {
+    "user_id": "safa-mh",
+    "passsword": "11112222",
+    "name": "Safa MH",
+    "email": "safa@gmail.com",
+    "bio": "",
+    "profileAvatar": "/pfp-images/pfp+safa-mh.jpg",
+    "profileBanner": "/banner-images/banner+safa-mh.webp",
+    "followersList": [
+      "a-partovii",
+      "safa"
+    ],
+    "followingList": [],
+    "joinedDate": "January 2025",
+    "verified": false
+  }
+]
