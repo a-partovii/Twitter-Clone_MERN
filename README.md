@@ -2,7 +2,7 @@
 
 This is a college student project designed to demonstrate a full-stack implementation of a social media platform.<br>
 The project focuses on the core architecture of a web application, showcasing how a React frontend interacts with a Node.js/Express backend.<br>
-Features include: user authentication, profile creation, user search, following users, posting tweets, liking tweets, retweeting, bookmarks, and more.
+Features include: user authentication, making profile, searching users, following users, posting tweets, like tweets, retweets, bookmarks, and more.
 
 ## 🚀 Tech Stack
 
